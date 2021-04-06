@@ -85,11 +85,8 @@ function draw() {
    }
 }
 function mousePressed() {
-  if(keyCode === 32) {
-    particles.push(new Particle(mouseX, 10,10));
-    for (var j = 0; j < particles.length; j++) {
-   
-      particles[j].display();
-    }
+    if(gameState!=="end") { 
+      count++; particle=new Particle(mouseX, 10, 10, 10); 
+    } 
   }
 }
